@@ -1,3 +1,5 @@
+package task1
+
 func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
 		return ""
@@ -6,7 +8,7 @@ func longestCommonPrefix(strs []string) string {
 	prefix := strs[0]
 
 	for i := 1; i < len(strs); i++ {
-		prefix = findPrefix(prefix, str[i])
+		prefix = findPrefix(prefix, strs[i])
 	}
 
 	return prefix
@@ -21,7 +23,7 @@ func findPrefix(str1, str2 string) string {
 		index++
 	}
 
-	str1[:index]
+	return str1[:index]
 }
 
 func minLength(a, b int) int {
